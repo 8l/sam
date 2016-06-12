@@ -1,0 +1,19 @@
+This is an implementation of Plan 9's graphics library
+under X using the Xt intrinsics. It should work for
+X11 release 3 or higher.
+
+The manual pages graphics.3, balloc.3, bitblt.3, event.3
+and rgbpix.3 describe the libg interface, with the following
+differences necessary to accommodate X:
+
+- xtbinit is used to initialize the library, instead of
+  binit
+
+- getfont is used to read a font by name, instead of
+  falloc, ffree, rdfontfile, wrfontfile
+
+- divpt is the name of libg's div (which conflicts with ANSI)
+
+- the event stuff is not optional (or bflush must be
+  called every now and then)
+

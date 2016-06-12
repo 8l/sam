@@ -1,0 +1,23 @@
+Hello!
+
+Sam is a powerful X-based text editor.  It seems to be kind of like
+'vi,' but driven by the mouse.  Good documentation lives in ./doc.
+./doc/sam.1 should be copied to /usr/man/man1, or wherever you keep
+you manual pages.
+
+Linux-ready executables are in ./bins.  'sam' should go in /usr/bin,
+while 'samterm' & 'samsave' should be in /usr/X386/bin.
+
+To compile, just type 'make,' or 'make install' to compile & install
+executables.  I compiled it with the 1.1.45 kernel & GCC 2.5.8, though
+I am sure that earlier versions will also work. 
+
+To make this program work under Linux, I just changed a few lines in 
+the standard Makefile.  The original distribution may be found by ftp
+from research.att.com:/dist/sam/bundle.Z.  Thanks to AT&T Bell Labs
+for making this available in the first place!
+
+Linux!
+Mark Travis
+mtravis@netcom.com
+

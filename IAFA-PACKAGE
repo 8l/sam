@@ -1,0 +1,18 @@
+
+Begin3
+Title:          SAM
+Version:        1992
+Entered-date:   09/27/94
+Description:    sam is a powerful, X-based multi-file text editor,
+		controlled both by mouse buttons & ex-like commands.
+Keywords:       editor sam plan9 vi ex
+Author:         ???@research.att.com (Rob Pike)
+Maintained-by:  mtravis@netcom.com (Mark Travis)
+Primary-site:   sunsite.unc.edu /pub/Linux/Incoming
+		363kB sam.tar.gz
+Alternate-site: 
+Original-site:  research.att.com /dist
+		365kB bundle.Z
+Platform:       X11
+Copying-policy: Free, must be distributed with std disclaimer.
+End

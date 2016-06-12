@@ -1,0 +1,40 @@
+#!/bin/rc
+
+files=()
+line=''
+
+if (~ $#* 0) {
+	echo 'usage: B [-nnn] files...' >[1=2]
+	exit 1
+}
+
+dir=`{/bin/pwd}
+
+if (~ $#USER 0)
+	USER=$LOGNAME
+pipe=/tmp/.sam.$USER
+
+if (! ~ $#DISPLAY 0)
+	pipe=$pipe.$DISPLAY
+
+if (! test -r $pipe) {
+	echo `{basename $0}^': No pipe "'$pipe'" to sam.' >[1=2]
+	exit 1
+}
+
+for (i) {
+	switch($i) {
+	case /*
+		files = ( $files $i )
+	case -*
+		line = `{echo $i | sed 's/.//'}
+	case *
+		files = ( $files $dir/$i )
+	}
+}
+
+if (! ~ $#files 0)
+	echo B $files >> $pipe
+
+if (! ~ $line '')
+	echo $line >> $pipe
